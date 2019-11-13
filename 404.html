@@ -29,7 +29,7 @@
     $.get('https://spreadsheets.google.com/feeds/list/1ObamrsS2P0hUyHKMaiUJqfgx_MngPHUfldneIhP3EZM/1/public/values?alt=json', function(data) {
         var d = data.feed.entry;
         var items = [];
-	var url = 'https://forms.gle/DgfXvQMmEhDinvFWA';
+	var url = 'http://discord.nctu.me/';
         for(var i in d) {
             var item = {};
             item.name = d[i].gsx$name.$t;	
