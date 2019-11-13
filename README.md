@@ -1,4 +1,5 @@
 # discord.nctu.me
 
-利用 github page 、 google sheets 及 nctu.me 搭建的簡易短網址服務
+一個實驗性 discord 自訂網址服務</h2></br>
+透過 github page , google sheets , nctu.me 搭建
 > [discord.nctu.me](http://discord.nctu.me/)
