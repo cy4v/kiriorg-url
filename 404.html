@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="DISCORD.nctu.me 快速自訂邀請連結">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discord.nctu.me/">
+    <meta property="og:site_name" content="DISCORD.nctu.me">
+    <meta property="og:description" content="一個有趣的 Discord 伺服器在等著你!">
     <title>Loading...</title>
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/cy4v/cy4v.github.io/master/images/favicon.png"/>
     <style>
@@ -29,12 +34,13 @@
     $.get('https://spreadsheets.google.com/feeds/list/1ObamrsS2P0hUyHKMaiUJqfgx_MngPHUfldneIhP3EZM/1/public/values?alt=json', function(data) {
         var d = data.feed.entry;
         var items = [];
-	var url = 'http://discord.nctu.me/';
+	var url = 'https://discord.nctu.me/';
+	var invitename = location.pathname.substr(1);
         for(var i in d) {
             var item = {};
             item.name = d[i].gsx$name.$t;	
-		if(location.pathname.substr(1) == item.name){
-			url = d[i].gsx$website.$t;
+		if(invitename == item.name){
+			url = 'https://discordapp.com/invite/' + d[i].gsx$invite.$t;
 			break;
 		}
 	    items.push(item);
