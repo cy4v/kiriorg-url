@@ -35,13 +35,15 @@
         for(var i in d) {
             var item = {};
             item.name = d[i].gsx$name.$t;	
+console.log(item.name);
 		if(invitename == item.name){
 			url = d[i].gsx$report-url.$t;
+console.log(url);
 			break;
 		}
         }
         $(loadingPage).hide();
-        location.replace(url);
+        //location.replace(url);
     });
     });
     </script>
